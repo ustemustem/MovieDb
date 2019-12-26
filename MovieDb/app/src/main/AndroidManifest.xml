@@ -10,17 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.oxcoding.moviemvvm.ui.single_movie_details.SingleMovie"> </activity>
-        <activity
-            android:name=".SplashScreen"
-            android:label="@string/app_name"
-            android:noHistory="true"
-            android:theme="@style/SplashTheeme">
+        <activity android:name="com.singleMovieDetail.SingleMovie">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".MainActivity"

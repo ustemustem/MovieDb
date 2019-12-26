@@ -1,4 +1,4 @@
-package com.oxcoding.moviemvvm.ui.single_movie_details
+package com.singleMovieDetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,12 +28,13 @@ class SingleMovie : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_movie)
 
-        val movieId: Int = intent.getIntExtra("id",1)
+                // val movieId: Int = intent.getIntExtra("id",1)
 
         val apiService : MovieDbInterface = MovieDbClient.getClient()
         movieRepository = MovieDetailsRepository(apiService)
 
-        viewModel = getViewModel(movieId)
+        viewModel = getViewModel(155)
+
 
         viewModel.movieDetails.observe(this, Observer {
             bindUI(it)

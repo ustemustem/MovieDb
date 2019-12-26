@@ -12,8 +12,8 @@ interface MovieDbInterface {
     // https://api.themoviedb.org/3/movie/155?api_key=0df9205e22f071e24e5abeba2aded6c6
     // https://api.themoviedb.org/3/
 
-     @GET("movie/popular")
-     fun getPopularMovie(@Query("page") page: Int): Single<MovieResponse>
+     @GET("movie/top_rated")
+     fun getTopRatedMovie(@Query("page") page: Int): Single<MovieResponse>
 
 
     @GET("movie/{movie_id}")

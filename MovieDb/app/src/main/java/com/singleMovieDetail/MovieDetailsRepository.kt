@@ -1,4 +1,4 @@
-package com.oxcoding.moviemvvm.ui.single_movie_details
+package com.singleMovieDetail
 
 import androidx.lifecycle.LiveData
 import com.data.api.MovieDbInterface

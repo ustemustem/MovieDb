@@ -12,8 +12,7 @@ import io.reactivex.schedulers.Schedulers
 class MovieDetailsNetworkDataSource(private val apiService : MovieDbInterface, private val compositeDisposable: CompositeDisposable) {
     private val _networkState  = MutableLiveData<NetworkState>()
     val networkState: LiveData<NetworkState>
-        get() = _networkState                   //with this get, no need to implement get function to get networkSate
-
+        get() = _networkState
     private val _downloadedMovieDetailsResponse =  MutableLiveData<MovieDetails>()
     val downloadedMovieResponse: LiveData<MovieDetails>
         get() = _downloadedMovieDetailsResponse
@@ -31,7 +30,7 @@ class MovieDetailsNetworkDataSource(private val apiService : MovieDbInterface, p
                         {
                             _downloadedMovieDetailsResponse.postValue(it)
                             _networkState.postValue(NetworkState.LOADED)
-                        },
+        },
                         {
                             _networkState.postValue(NetworkState.ERROR)
                             Log.e("MovieDetailsDataSource", it.message)
