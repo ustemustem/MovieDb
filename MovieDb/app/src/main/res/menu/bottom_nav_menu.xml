@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_movie"
+        android:icon="@drawable/movies_colorandnull"
+        android:checkable="true"
+        android:title="Movies" />
+
+    <item
+        android:id="@+id/navigation_tv"
+        android:icon="@drawable/tv_colorandnull"
+        android:checkable="true"
+        android:title="Tv" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:checkable="true"
+        android:icon="@drawable/profile_colorandnull"
+        android:title="Profile" />
+
+</menu>
