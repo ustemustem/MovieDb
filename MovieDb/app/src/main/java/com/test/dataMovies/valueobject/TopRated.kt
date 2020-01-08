@@ -1,13 +1,13 @@
-package com.data.valueobject
+package com.test.dataMovies.valueobject
 
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieResponse(
+data class TopRated(
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")
-    val movieList: List<Movie>,
+    val topRatedList: List<TopRatedItem>,
     @SerializedName("total_pages")
     val totalPages: Int,
     @SerializedName("total_results")

@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.test.moviedb.R
 
 
-
 class MoviesFragment : Fragment() {
 
 
@@ -30,7 +29,7 @@ class MoviesFragment : Fragment() {
         homeViewModel =
             ViewModelProviders.of(this).get(MovieViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_movies, container, false)
-       // val textView: TextView = root.findViewById(R.id.fragment_movies)
+        // val textView: TextView = root.findViewById(R.id.fragment_movies)
         homeViewModel.text.observe(this, Observer {
         })
 
@@ -53,7 +52,6 @@ class MoviesFragment : Fragment() {
         layout3.orientation = HORIZONTAL
         popularrecyclerView3?.layoutManager = layout3
         popularrecyclerView3?.adapter = pmAdapter()
-
 
 
         return root

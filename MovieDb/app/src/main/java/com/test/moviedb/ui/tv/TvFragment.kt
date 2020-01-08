@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -15,8 +14,8 @@ import com.test.moviedb.R
 
 
 class TvFragment : Fragment() {
-
     private lateinit var tvViewModel: TvViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +25,6 @@ class TvFragment : Fragment() {
         tvViewModel =
             ViewModelProviders.of(this).get(TvViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_tv, container, false)
-      //  val textView: TextView = root.findViewById(R.id.fragment_tv)
         tvViewModel.text.observe(this, Observer {
 
         })
@@ -40,11 +38,10 @@ class TvFragment : Fragment() {
         tvrecyclerView1?.adapter = tvAdapter()
        //popular
         val layout2 = LinearLayoutManager(activity)
-        layout2.orientation = LinearLayoutManager.HORIZONTAL
+        layout2.orientation = LinearLayoutManager.VERTICAL
         tvpopularrecyclerView2?.layoutManager = layout2
         tvpopularrecyclerView2?.adapter = ptvAdapter()
-
-
         return root
     }
+
 }

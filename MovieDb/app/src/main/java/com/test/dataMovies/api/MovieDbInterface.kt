@@ -1,7 +1,7 @@
-package com.data.api
+package com.test.dataMovies.api
 
-import com.data.valueobject.MovieDetails
-import com.data.valueobject.MovieResponse
+import com.test.dataMovies.valueobject.MovieResponse
+import com.test.dataMovies.valueobject.TopRated
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -13,9 +13,9 @@ interface MovieDbInterface {
     // https://api.themoviedb.org/3/
 
      @GET("movie/top_rated")
-     fun getTopRatedMovie(@Query("page") page: Int): Single<MovieResponse>
+     fun getTopRatedMovie(@Query("page") page: Int): Single<TopRated>
 
 
     @GET("movie/{movie_id}")
-    fun getMovieDetails(@Path("movie_id") id: Int): Single<MovieDetails>
+    fun getMovieDetails(@Path("movie_id") id: Int): Single<MovieResponse>
 }

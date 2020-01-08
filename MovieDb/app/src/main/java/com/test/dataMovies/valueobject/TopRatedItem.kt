@@ -1,10 +1,8 @@
-package com.data.valueobject
-
+package com.test.dataMovies.valueobject
 
 import com.google.gson.annotations.SerializedName
 
-data class Movie(
-
+data class TopRatedItem (
     val popularity: Double,
     @SerializedName("poster_path")
     val posterPath: String,
@@ -18,4 +16,9 @@ data class Movie(
     val voteAverage: Double,
     @SerializedName("vote_count")
     val voteCount: Int
+
+
+
+
 )
+

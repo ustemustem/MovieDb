@@ -3,9 +3,9 @@ package com.test.dataMovies.repository
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
-import com.data.api.MovieDbInterface
-import com.data.valueobject.Movie
 import com.test.dataMovies.api.FIRST_PAGE
+import com.test.dataMovies.api.MovieDbInterface
+import com.test.dataMovies.valueobject.Movie
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
@@ -41,7 +41,7 @@ class MovieDataSource (private val apiService : MovieDbInterface, private val co
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
-            apiService.getPopularMovie(params.key)
+            apiService.getMovieDetails(params.key)
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                     {

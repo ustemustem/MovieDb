@@ -26,6 +26,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:textSize="18sp"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
                 android:text="TV"
@@ -44,6 +45,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:textSize="16sp"
                 android:textAlignment="textStart"
                 android:text="Popular" />
 
@@ -51,7 +53,7 @@
                 android:id="@+id/recyclerView_tv_popular"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
         </LinearLayout>

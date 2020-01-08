@@ -1,4 +1,4 @@
-package com.singleMovieDetail
+package com.test.moviedb.singleMovieDetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,11 +8,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
-import com.data.api.MovieDbClient
-import com.data.api.MovieDbInterface
-import com.data.api.POSTER_BASE_URL
-import com.data.repository.NetworkState
-import com.data.valueobject.MovieDetails
+import com.test.dataMovies.api.MovieDbClient
+import com.test.dataMovies.api.MovieDbInterface
+import com.test.dataMovies.api.POSTER_BASE_URL
+import com.test.dataMovies.repository.NetworkState
+import com.test.dataMovies.valueobject.MovieDetails
+
 import com.test.moviedb.R
 import kotlinx.android.synthetic.main.activity_single_movie.*
 import java.text.NumberFormat
@@ -27,8 +28,6 @@ class SingleMovie : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_movie)
-
-                // val movieId: Int = intent.getIntExtra("id",1)
 
         val apiService : MovieDbInterface = MovieDbClient.getClient()
         movieRepository = MovieDetailsRepository(apiService)

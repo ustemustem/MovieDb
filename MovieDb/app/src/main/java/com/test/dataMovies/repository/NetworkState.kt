@@ -1,12 +1,11 @@
-package com.data.repository
-
-import android.net.Network
+package com.test.dataMovies.repository
 
 enum class Status
 {
     RUNNING,
     SUCCESS,
     FAILED
+
 
 }
 
@@ -16,6 +15,7 @@ class NetworkState(val status: Status, val msg: String) {
     companion object{
 
 
+        val ENDOFLIST: NetworkState
         val LOADED: NetworkState
         val LOADING: NetworkState
         val ERROR: NetworkState
@@ -24,6 +24,7 @@ class NetworkState(val status: Status, val msg: String) {
                     LOADED = NetworkState(Status.SUCCESS, "Success")
                    LOADING = NetworkState(Status.RUNNING, "Running")
                      ERROR = NetworkState(Status.FAILED, "Something went wrong")
+                    ENDOFLIST = NetworkState(Status.FAILED, "End of list")
 
 
         }

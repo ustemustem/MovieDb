@@ -9,7 +9,7 @@ import com.test.moviedb.R
 
 class trmAdapter: RecyclerView.Adapter<trmViewHolder>(){
     override fun getItemCount(): Int {
-        return 6
+        return 8
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): trmViewHolder {
